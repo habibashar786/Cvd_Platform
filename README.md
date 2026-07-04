@@ -106,21 +106,25 @@ graph TD
 
 ## 📊 Models Trained & Evaluated
 
-### Baseline
-- Logistic Regression (Selected Best Baseline)
-- Decision Tree
-- Random Forest
-- Naive Bayes
-- KNN
-- SVM
+### Best Classifier (Primary Selection)
+- **LightGBM (Selected Best Model)** ✨
+  - **ROC-AUC:** `0.9654` (Clinical threshold: ≥ 0.75 passed)
+  - **F1-Score:** `0.9217`
+  - **Sensitivity (True Positive Rate):** `0.8706` (1124 CVD+ cases correctly identified)
+  - **Specificity:** `0.9923` (CVD- correctly ruled out)
 
-### Ensemble
+### Baselines & Ensembles Benchmarked
+- Logistic Regression (Baseline)
+- CatBoost (Thesis model)
+- Random Forest
+- XGBoost
 - Gradient Boosting
 - AdaBoost
+- Decision Tree
 - Extra Trees
-- **XGBoost** ✨
-- **LightGBM** ✨
-- **CatBoost** ✨ (Thesis model)
+- Support Vector Machine
+- K-Nearest Neighbors
+- Naive Bayes
 
 ### Evaluation Metrics
 - Accuracy, Balanced Accuracy
@@ -216,18 +220,18 @@ pytest tests/ -v -k "bdd"
 
 ## 🌐 Clinical Frontend & Comparative Analysis Dashboard
 
-A premium, interactive web interface built using **Vite**, **React**, **Tailwind CSS**, and **Recharts**.
+A premium, interactive web interface built using **Vite**, **React**, **Tailwind CSS**, and **Recharts** running alongside a **FastAPI** backend.
 
 ### Key Modules:
-1. **Patient Risk Assessment (Overview)**: Real-time clinical form calculations and FHIR RiskAssessment outputs.
-2. **EHR Integration (FHIR)**: Gateway to ingest HL7 FHIR R4 JSON bundles and assess risk factors.
-3. **Comparative Analysis**: A comprehensive module comparing multiple models side-by-side:
+1. **Patient Risk Assessment (Overview)**: Real-time clinical form calculations and instant model explanations.
+2. **EHR Integration (FHIR)**: Ingests HL7 FHIR R4 JSON bundles via the `/fhir/Observation` endpoint to parse vitals and output FHIR-compatible `RiskAssessment` resources.
+3. **Comparative Analysis**: A comprehensive module comparing all 12 models side-by-side:
    - *Model Performance*: Accuracies, log losses, calibration, ROC/PR curves, and confusion matrices.
-   - *Explainable AI (XAI)*: Includes SHAP feature impact lists, LIME local patient scenario explanation dropdown gauges, and SHAP vs LIME radar comparison spider charts.
+   - *Explainable AI (XAI)*: Includes global SHAP feature importance lists and LIME local patient scenario explanation dropdown gauges.
    - *Statistical Analysis*: Showcases ANOVA, Friedman, Wilcoxon, and McNemar significance metrics.
    - *Clinical Insights*: Dynamic AI observations highlighting best models, dataset leaks, and cohort parameters.
    - *Executive Summary*: Leaderboards and print-ready healthcare summaries.
-4. **Cryptographic Audit Ledger**: An immutable registry showing SHA-256 HMAC chained signatures. Supports real-time signature integrity verification.
+4. **Patient Records Ledger**: Accessible to **Clinicians**, **Administrators**, and **Auditors**. It queries up to 150 entries dynamically from the cryptographically secured SHA-256 HMAC chained audit log to verify ledger integrity.
 5. **Voice Assistant Bot**: A floating interactive microphone pinned to the bottom-right corner. Responds to voice commands (e.g., *"show models"*, *"best model"*, *"explainable AI"*) to speak back clinical summaries and navigate tabs automatically.
 
 ---

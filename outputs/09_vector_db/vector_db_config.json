@@ -1,0 +1,7 @@
+{
+  "vector_db": "LocalTFIDFStore",
+  "document_count": 2,
+  "chunk_count": 2,
+  "status": "indexed",
+  "generated_at": "2026-06-27T20:03:34.282852+00:00"
+}

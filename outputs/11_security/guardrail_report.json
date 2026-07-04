@@ -1,0 +1,38 @@
+{
+  "guardrail_status": "PASS",
+  "critical_issues": 0,
+  "high_issues": 0,
+  "file_scans": {
+    "outputs\\04_eda\\eda_report.html": {
+      "pii_findings": [],
+      "injection_findings": [],
+      "hallucination_findings": [],
+      "status": "CLEAN"
+    },
+    "outputs\\06_machine_learning\\model_card.md": {
+      "pii_findings": [],
+      "injection_findings": [],
+      "hallucination_findings": [],
+      "status": "CLEAN"
+    },
+    "outputs\\07_xai\\shap_report.html": {
+      "pii_findings": [],
+      "injection_findings": [],
+      "hallucination_findings": [],
+      "status": "CLEAN"
+    }
+  },
+  "checks_performed": [
+    "PII Detection (Medicare, TFN, Email, Phone, DOB)",
+    "Prompt Injection Pattern Scanning",
+    "Hallucination Trigger Detection",
+    "Output File Security Audit"
+  ],
+  "compliance": {
+    "australian_privacy_act": "CHECKED",
+    "app_principles": "CHECKED",
+    "essential_eight": "PARTIAL",
+    "iso_27001": "DESIGN_COMPLIANT"
+  },
+  "generated_at": "2026-06-27T20:03:34.941409+00:00"
+}

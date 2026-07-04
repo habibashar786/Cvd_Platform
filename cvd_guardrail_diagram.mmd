@@ -1,0 +1,27 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	threat_scan(threat_scan)
+	pii_detect(pii_detect)
+	bias_audit(bias_audit)
+	compliance(compliance)
+	decision(decision)
+	blocked(blocked)
+	approved(approved)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> threat_scan;
+	bias_audit --> compliance;
+	compliance --> decision;
+	decision -.-> approved;
+	decision -.-> blocked;
+	pii_detect --> bias_audit;
+	threat_scan --> pii_detect;
+	approved --> __end__;
+	blocked --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

@@ -1,0 +1,17 @@
+{
+  "on_prem": [
+    "Docker",
+    "Kubernetes",
+    "OpenShift"
+  ],
+  "hybrid": [
+    "Azure Arc",
+    "Anthos"
+  ],
+  "cloud": [
+    "Azure",
+    "AWS",
+    "GCP"
+  ],
+  "generated_at": "2026-06-27T20:03:34.329048+00:00"
+}

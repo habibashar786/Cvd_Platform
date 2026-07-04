@@ -1,0 +1,66 @@
+# CVD Risk Intelligence Platform — .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Dataset (NEVER commit patient data)
+cvd risk dataset/
+*.csv
+*.xlsx
+*.xls
+*.parquet
+
+# Models (large files — use DVC or cloud storage)
+outputs/06_machine_learning/models/*.pkl
+outputs/03_preprocessing/scalers.pkl
+
+# Sensitive outputs
+outputs/15_audit/security_events.jsonl
+outputs/15_audit/quarantine/
+
+# IDE
+.idea/
+.vscode/settings.json
+*.swp
+.DS_Store
+Thumbs.db
+
+# CatBoost training logs (auto-generated, not needed in repo)
+catboost_info/
+
+# Audit trail (contains real auth events and HMAC signatures — sensitive)
+outputs/15_audit/audit_trail.jsonl
+outputs/15_audit/audit_trail.jsonl.bak
+outputs/15_audit/security_events.jsonl
+outputs/15_audit/quarantine/
+
+# Test artifacts
+.coverage
+.pytest_cache/
+htmlcov/
+outputs/14_tests/coverage_html/
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Keep outputs folder structure (so agents don't fail on fresh clone)
+!outputs/.gitkeep
+!outputs/*/.gitkeep
+!outputs/*/

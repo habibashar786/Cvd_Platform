@@ -1,0 +1,21 @@
+{
+  "features": [
+    "age",
+    "sex",
+    "education",
+    "marital_status",
+    "occupation",
+    "sbp_avg",
+    "dbp_avg",
+    "bg_mgdl",
+    "bmi",
+    "smoking",
+    "village",
+    "areas",
+    "bplt",
+    "lltt",
+    "aptt",
+    "age_decade"
+  ],
+  "target": "highrisk"
+}

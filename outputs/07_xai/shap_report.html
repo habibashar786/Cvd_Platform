@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>SHAP Report</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+  body{font-family:"Segoe UI",sans-serif;max-width:1100px;margin:40px auto;color:#2c3e50}
+  h1{border-bottom:3px solid #e74c3c;padding-bottom:12px}
+  .patient-card{background:#fef9e7;border-left:4px solid #f39c12;padding:16px;margin:16px 0;border-radius:4px}
+  .narrative{font-size:.9rem;line-height:1.8;margin-top:8px}
+</style></head><body>
+<h1>🧠 SHAP Explainability Report — CVD Risk Platform</h1>
+<p>Explainer: <strong>TreeExplainer</strong> |
+Generated: 2026-07-04T10:16:21.110139+00:00</p>
+<h2>Global Feature Importance (Mean |SHAP|)</h2>
+<div id="shap_chart" style="height:520px"></div>
+<script>
+const d = [{"feature": "sbp_avg", "importance": 3.817025}, {"feature": "dbp_avg", "importance": 1.745567}, {"feature": "age", "importance": 0.287753}, {"feature": "occupation", "importance": 0.283156}, {"feature": "age_decade", "importance": 0.145635}, {"feature": "village", "importance": 0.117267}, {"feature": "bg_mgdl", "importance": 0.097033}, {"feature": "bplt", "importance": 0.087494}, {"feature": "bmi", "importance": 0.084098}, {"feature": "areas", "importance": 0.051475}, {"feature": "smoking", "importance": 0.050197}, {"feature": "marital_status", "importance": 0.03751}, {"feature": "education", "importance": 0.025771}, {"feature": "sex", "importance": 0.023854}, {"feature": "aptt", "importance": 0.009853}, {"feature": "lltt", "importance": 0.005496}];
+Plotly.newPlot("shap_chart",[{
+  type:"bar",orientation:"h",
+  x:d.map(r=>r.importance), y:d.map(r=>r.feature),
+  marker:{color:d.map(r=>r.importance),colorscale:"Reds"}
+}],{title:"Mean |SHAP| — Global Feature Importance",height:520,
+  xaxis:{title:"Mean |SHAP value|"}},{responsive:true});
+</script>
+<h2>Patient-Level Clinical Explanations</h2>
+
+        <div class="patient-card">
+          <h3>Patient #1</h3>
+          <div class="narrative">- **sbp_avg** strongly decreases CVD risk (SHAP=-4.2330)<br>- **dbp_avg** strongly decreases CVD risk (SHAP=-1.2759)<br>- **village** strongly decreases CVD risk (SHAP=-0.1668)<br>- **bplt** strongly decreases CVD risk (SHAP=-0.1080)<br>- **areas** moderately decreases CVD risk (SHAP=-0.0785)</div>
+        </div>
+        <div class="patient-card">
+          <h3>Patient #2</h3>
+          <div class="narrative">- **sbp_avg** strongly increases CVD risk (SHAP=+6.8092)<br>- **dbp_avg** strongly decreases CVD risk (SHAP=-0.6086)<br>- **village** strongly decreases CVD risk (SHAP=-0.2112)<br>- **occupation** strongly increases CVD risk (SHAP=+0.1440)<br>- **bmi** moderately decreases CVD risk (SHAP=-0.0629)</div>
+        </div>
+        <div class="patient-card">
+          <h3>Patient #3</h3>
+          <div class="narrative">- **sbp_avg** strongly decreases CVD risk (SHAP=-3.8208)<br>- **dbp_avg** strongly decreases CVD risk (SHAP=-0.5652)<br>- **occupation** strongly decreases CVD risk (SHAP=-0.3385)<br>- **bg_mgdl** strongly increases CVD risk (SHAP=+0.1601)<br>- **age_decade** strongly decreases CVD risk (SHAP=-0.1180)</div>
+        </div>
+<footer style="color:#95a5a6;font-size:.8rem;margin-top:40px">CVD Risk Intelligence Platform | Australian Healthcare Compliant</footer>
+</body></html>

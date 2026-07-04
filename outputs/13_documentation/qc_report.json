@@ -1,0 +1,104 @@
+{
+  "qc_status": "APPROVED",
+  "artifacts_complete": true,
+  "model_meets_threshold": true,
+  "leakage_suspected": false,
+  "criteria_passed": "6/6",
+  "criteria_detail": {
+    "All datasets validated": true,
+    "EDA completed": true,
+    "Best model selected": true,
+    "SHAP completed": true,
+    "LIME completed": true,
+    "Security review passed": true
+  },
+  "model_metrics": {
+    "status": "PRESENT",
+    "best_model": "LightGBM",
+    "roc_auc": 0.9654,
+    "f1_score": 0.9217,
+    "sensitivity": 0.8706,
+    "meets_threshold": true,
+    "leakage_suspected": false,
+    "perfect_score_models": 0,
+    "leakage_note": "No leakage signals detected."
+  },
+  "data_quality": {
+    "preprocessing_shape": {
+      "rows": 22093,
+      "cols": 17
+    },
+    "imbalance_strategy": "N/A",
+    "quality_report_exists": true
+  },
+  "artifact_inventory": {
+    "01_data_catalog": {
+      "dataset_catalog.json": {
+        "exists": true,
+        "size_kb": 14.57
+      },
+      "data_dictionary.md": {
+        "exists": true,
+        "size_kb": 1.59
+      }
+    },
+    "02_data_cleaning": {
+      "cleaned_dataset.parquet": {
+        "exists": true,
+        "size_kb": 324.05
+      },
+      "data_quality_report.html": {
+        "exists": true,
+        "size_kb": 3.27
+      }
+    },
+    "03_preprocessing": {
+      "processed_dataset.parquet": {
+        "exists": true,
+        "size_kb": 190.73
+      }
+    },
+    "04_eda": {
+      "eda_report.html": {
+        "exists": true,
+        "size_kb": 871.92
+      }
+    },
+    "06_machine_learning": {
+      "models/best_model.pkl": {
+        "exists": true,
+        "size_kb": 340.2
+      },
+      "metrics/model_metrics.json": {
+        "exists": true,
+        "size_kb": 7.21
+      },
+      "model_card.md": {
+        "exists": true,
+        "size_kb": 1.39
+      }
+    },
+    "07_xai": {
+      "shap_report.html": {
+        "exists": true,
+        "size_kb": 3.24
+      },
+      "lime_report.html": {
+        "exists": true,
+        "size_kb": 4.31
+      }
+    },
+    "11_security": {
+      "guardrail_report.json": {
+        "exists": true,
+        "size_kb": 1.04
+      },
+      "threat_model.md": {
+        "exists": true,
+        "size_kb": 1.23
+      }
+    }
+  },
+  "release_recommendation": "APPROVED FOR DEPLOYMENT",
+  "generated_at": "2026-07-04T10:16:21.150582+00:00"
+}

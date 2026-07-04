@@ -1,0 +1,20 @@
+{
+  "components": [
+    "DocumentLoader",
+    "Chunker",
+    "Embedder",
+    "Retriever",
+    "GraphRetriever",
+    "HybridRetriever",
+    "Reranker",
+    "LLMLayer"
+  ],
+  "capabilities": [
+    "Clinical Q&A",
+    "Patient Risk Explanation",
+    "Guideline Retrieval",
+    "Research Support"
+  ],
+  "status": "fully_functional",
+  "generated_at": "2026-06-27T20:03:34.286952+00:00"
+}

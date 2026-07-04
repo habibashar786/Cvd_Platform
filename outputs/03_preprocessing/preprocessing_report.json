@@ -1,0 +1,49 @@
+{
+  "leakage_audit": {
+    "dropped_columns": [
+      "cvdrisk",
+      "patient_id"
+    ],
+    "reason": "Columns encode or strongly correlate with target"
+  },
+  "feature_engineering": [
+    "age_decade"
+  ],
+  "categorical_encoding": {},
+  "scaling": {
+    "RobustScaler": [
+      "sbp_avg",
+      "dbp_avg",
+      "bmi",
+      "bplt"
+    ],
+    "StandardScaler": [
+      "age",
+      "sex",
+      "education",
+      "marital_status",
+      "occupation",
+      "bg_mgdl",
+      "smoking",
+      "village",
+      "areas",
+      "lltt",
+      "aptt",
+      "age_decade"
+    ]
+  },
+  "imbalance": {
+    "original_distribution": {
+      "0": 15640,
+      "1": 6453
+    },
+    "minority_pct": 29.21,
+    "strategy": "SMOTE applied in Agent 6 after train/test split (leakage-safe)"
+  },
+  "target_column": "highrisk",
+  "output_shape": {
+    "rows": 22093,
+    "cols": 17
+  },
+  "generated_at": "2026-07-04T10:15:40.917718+00:00"
+}

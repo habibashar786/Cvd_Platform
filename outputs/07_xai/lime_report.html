@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>LIME Report</title>
+<style>body{font-family:"Segoe UI",sans-serif;max-width:1000px;margin:40px auto;color:#2c3e50}
+h1{border-bottom:3px solid #9b59b6;padding-bottom:12px}</style></head><body>
+<h1>🔬 LIME Explainability Report — CVD Risk Platform</h1>
+<p>2026-07-04T10:16:21.111295+00:00</p>
+
+        <div style="background:#f8f9fa;border-radius:8px;padding:20px;margin:16px 0">
+          <h3>Patient #1</h3>
+          <p>P(CVD) = <strong style="color:#e74c3c">0.0205</strong> &nbsp;|&nbsp;
+             P(No CVD) = <strong style="color:#27ae60">0.9795</strong></p>
+          <table style="width:100%;border-collapse:collapse">
+          <tr><th style="background:#2c3e50;color:white;padding:8px">Feature Rule</th>
+              <th style="background:#2c3e50;color:white;padding:8px">LIME Weight</th></tr>
+          <tr><td>-1.00 < age_decade <= -0.06</td><td style="color:#e74c3c">-0.1671</td></tr><tr><td>-1.09 < occupation <= -0.27</td><td style="color:#e74c3c">-0.1070</td></tr><tr><td>dbp_avg <= -0.32</td><td style="color:#e74c3c">-0.0999</td></tr><tr><td>lltt <= -0.09</td><td style="color:#e74c3c">-0.0994</td></tr><tr><td>-0.45 < sbp_avg <= -0.05</td><td style="color:#e74c3c">-0.0984</td></tr><tr><td>marital_status <= -0.40</td><td style="color:#27ae60">+0.0837</td></tr><tr><td>bplt <= 0.00</td><td style="color:#e74c3c">-0.0306</td></tr><tr><td>village > 0.68</td><td style="color:#e74c3c">-0.0286</td></tr><tr><td>-0.27 < age <= 0.57</td><td style="color:#27ae60">+0.0246</td></tr><tr><td>bg_mgdl > 0.12</td><td style="color:#27ae60">+0.0143</td></tr>
+          </table>
+        </div>
+        <div style="background:#f8f9fa;border-radius:8px;padding:20px;margin:16px 0">
+          <h3>Patient #2</h3>
+          <p>P(CVD) = <strong style="color:#e74c3c">0.9996</strong> &nbsp;|&nbsp;
+             P(No CVD) = <strong style="color:#27ae60">0.0004</strong></p>
+          <table style="width:100%;border-collapse:collapse">
+          <tr><th style="background:#2c3e50;color:white;padding:8px">Feature Rule</th>
+              <th style="background:#2c3e50;color:white;padding:8px">LIME Weight</th></tr>
+          <tr><td>occupation <= -1.09</td><td style="color:#27ae60">+0.2641</td></tr><tr><td>sbp_avg > 0.53</td><td style="color:#27ae60">+0.2454</td></tr><tr><td>-1.00 < age_decade <= -0.06</td><td style="color:#e74c3c">-0.1336</td></tr><tr><td>marital_status <= -0.40</td><td style="color:#27ae60">+0.0657</td></tr><tr><td>0.00 < dbp_avg <= 0.53</td><td style="color:#e74c3c">-0.0590</td></tr><tr><td>lltt <= -0.09</td><td style="color:#e74c3c">-0.0552</td></tr><tr><td>-0.27 < age <= 0.57</td><td style="color:#27ae60">+0.0474</td></tr><tr><td>bplt <= 0.00</td><td style="color:#e74c3c">-0.0435</td></tr><tr><td>village > 0.68</td><td style="color:#e74c3c">-0.0227</td></tr><tr><td>smoking <= -0.75</td><td style="color:#27ae60">+0.0179</td></tr>
+          </table>
+        </div>
+        <div style="background:#f8f9fa;border-radius:8px;padding:20px;margin:16px 0">
+          <h3>Patient #3</h3>
+          <p>P(CVD) = <strong style="color:#e74c3c">0.0551</strong> &nbsp;|&nbsp;
+             P(No CVD) = <strong style="color:#27ae60">0.9449</strong></p>
+          <table style="width:100%;border-collapse:collapse">
+          <tr><th style="background:#2c3e50;color:white;padding:8px">Feature Rule</th>
+              <th style="background:#2c3e50;color:white;padding:8px">LIME Weight</th></tr>
+          <tr><td>dbp_avg > 0.53</td><td style="color:#27ae60">+0.2444</td></tr><tr><td>age_decade <= -1.00</td><td style="color:#27ae60">+0.2060</td></tr><tr><td>-0.27 < occupation <= 0.54</td><td style="color:#e74c3c">-0.1369</td></tr><tr><td>-0.16 < village <= 0.68</td><td style="color:#27ae60">+0.0874</td></tr><tr><td>lltt <= -0.09</td><td style="color:#e74c3c">-0.0725</td></tr><tr><td>-0.05 < sbp_avg <= 0.53</td><td style="color:#e74c3c">-0.0635</td></tr><tr><td>marital_status <= -0.40</td><td style="color:#27ae60">+0.0447</td></tr><tr><td>-0.83 < age <= -0.27</td><td style="color:#e74c3c">-0.0252</td></tr><tr><td>bplt <= 0.00</td><td style="color:#e74c3c">-0.0170</td></tr><tr><td>bmi <= -0.50</td><td style="color:#e74c3c">-0.0155</td></tr>
+          </table>
+        </div>
+<footer style="color:#95a5a6;font-size:.8rem;margin-top:40px">CVD Risk Intelligence Platform</footer>
+</body></html>

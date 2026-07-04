@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  cvd-api:
+    build: .
+    ports:
+      - '8000:8000'
+    environment:
+      - MODEL_PATH=/app/outputs/06_machine_learning/models/best_model.pkl

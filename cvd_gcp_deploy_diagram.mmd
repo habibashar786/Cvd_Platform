@@ -1,0 +1,35 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	cloud_armor(cloud_armor)
+	load_balancer(load_balancer)
+	fastapi_pod(fastapi_pod)
+	streamlit_pod(streamlit_pod)
+	orchestrator_pod(orchestrator_pod)
+	cloud_storage(cloud_storage)
+	vertex_vector_db(vertex_vector_db)
+	cloud_spanner(cloud_spanner)
+	cloud_monitoring(cloud_monitoring)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> cloud_armor;
+	cloud_armor --> load_balancer;
+	cloud_spanner --> cloud_monitoring;
+	cloud_storage --> cloud_monitoring;
+	fastapi_pod --> cloud_monitoring;
+	fastapi_pod --> cloud_storage;
+	load_balancer --> fastapi_pod;
+	load_balancer --> orchestrator_pod;
+	load_balancer --> streamlit_pod;
+	orchestrator_pod --> cloud_spanner;
+	orchestrator_pod --> cloud_storage;
+	orchestrator_pod --> vertex_vector_db;
+	streamlit_pod --> cloud_monitoring;
+	vertex_vector_db --> cloud_monitoring;
+	cloud_monitoring --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

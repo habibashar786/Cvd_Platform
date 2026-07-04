@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "id": "Age",
+      "type": "demographic",
+      "desc": "Patient age in years"
+    },
+    {
+      "id": "Gender",
+      "type": "demographic",
+      "desc": "Patient physiological gender"
+    },
+    {
+      "id": "Systolic_BP",
+      "type": "vital",
+      "desc": "Systolic blood pressure (ap_hi)"
+    },
+    {
+      "id": "Diastolic_BP",
+      "type": "vital",
+      "desc": "Diastolic blood pressure (ap_lo)"
+    },
+    {
+      "id": "Pulse_Pressure",
+      "type": "derived_vital",
+      "desc": "Difference between systolic and diastolic BP"
+    },
+    {
+      "id": "Cholesterol",
+      "type": "lab",
+      "desc": "Total blood cholesterol level"
+    },
+    {
+      "id": "Glucose",
+      "type": "lab",
+      "desc": "Blood glucose level"
+    },
+    {
+      "id": "BMI",
+      "type": "derived_demographic",
+      "desc": "Body Mass Index calculated from weight and height"
+    },
+    {
+      "id": "Smoking",
+      "type": "lifestyle",
+      "desc": "Active tobacco smoking status"
+    },
+    {
+      "id": "Alcohol",
+      "type": "lifestyle",
+      "desc": "Alcohol consumption status"
+    },
+    {
+      "id": "Active_Lifestyle",
+      "type": "lifestyle",
+      "desc": "Level of physical activity status"
+    },
+    {
+      "id": "CVD_Risk",
+      "type": "clinical_outcome",
+      "desc": "10-year risk of cardiovascular disease event"
+    },
+    {
+      "id": "Hypertension",
+      "type": "diagnosis",
+      "desc": "High blood pressure condition (BP >= 140/90)"
+    },
+    {
+      "id": "Arterial_Stiffness",
+      "type": "pathology",
+      "desc": "Loss of arterial compliance and elasticity"
+    },
+    {
+      "id": "Hypercholesterolemia",
+      "type": "diagnosis",
+      "desc": "Abnormally high levels of cholesterol in the blood"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Age",
+      "target": "Systolic_BP",
+      "relationship": "increases_with"
+    },
+    {
+      "source": "Age",
+      "target": "Arterial_Stiffness",
+      "relationship": "causes_gradual"
+    },
+    {
+      "source": "Systolic_BP",
+      "target": "Pulse_Pressure",
+      "relationship": "increases"
+    },
+    {
+      "source": "Systolic_BP",
+      "target": "Hypertension",
+      "relationship": "defines"
+    },
+    {
+      "source": "Diastolic_BP",
+      "target": "Pulse_Pressure",
+      "relationship": "decreases"
+    },
+    {
+      "source": "Diastolic_BP",
+      "target": "Hypertension",
+      "relationship": "defines"
+    },
+    {
+      "source": "Cholesterol",
+      "target": "Hypercholesterolemia",
+      "relationship": "defines"
+    },
+    {
+      "source": "Glucose",
+      "target": "CVD_Risk",
+      "relationship": "induces_endothelial_damage"
+    },
+    {
+      "source": "Smoking",
+      "target": "Arterial_Stiffness",
+      "relationship": "accelerates"
+    },
+    {
+      "source": "Smoking",
+      "target": "CVD_Risk",
+      "relationship": "directly_increases"
+    },
+    {
+      "source": "Alcohol",
+      "target": "Systolic_BP",
+      "relationship": "increases_if_excessive"
+    },
+    {
+      "source": "Active_Lifestyle",
+      "target": "CVD_Risk",
+      "relationship": "reduces_risk"
+    },
+    {
+      "source": "Active_Lifestyle",
+      "target": "Systolic_BP",
+      "relationship": "lowers"
+    },
+    {
+      "source": "Hypertension",
+      "target": "CVD_Risk",
+      "relationship": "increases_strain"
+    },
+    {
+      "source": "Arterial_Stiffness",
+      "target": "Systolic_BP",
+      "relationship": "increases"
+    },
+    {
+      "source": "Hypercholesterolemia",
+      "target": "Arterial_Stiffness",
+      "relationship": "promotes_plaque"
+    }
+  ],
+  "node_count": 15,
+  "edge_count": 16,
+  "generated_at": "2026-06-27T20:03:34.274349+00:00"
+}

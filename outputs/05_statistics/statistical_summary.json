@@ -1,0 +1,171 @@
+{
+  "chi_square": [],
+  "ttest_mannwhitney": [
+    {
+      "feature": "age",
+      "t_stat": 44.7293,
+      "t_p": 0.0,
+      "u_stat": 158234589.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.3494,
+      "mean_cvd_neg": -0.1466
+    },
+    {
+      "feature": "sex",
+      "t_stat": -10.9133,
+      "t_p": 0.0,
+      "u_stat": 114925387.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": -0.0861,
+      "mean_cvd_neg": 0.0364
+    },
+    {
+      "feature": "education",
+      "t_stat": -11.8142,
+      "t_p": 0.0,
+      "u_stat": 114564416.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": -0.0972,
+      "mean_cvd_neg": 0.0338
+    },
+    {
+      "feature": "marital_status",
+      "t_stat": 20.3698,
+      "t_p": 0.0,
+      "u_stat": 133271819.0,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.1657,
+      "mean_cvd_neg": -0.0718
+    },
+    {
+      "feature": "occupation",
+      "t_stat": -27.9048,
+      "t_p": 0.0,
+      "u_stat": 100955801.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": -0.2223,
+      "mean_cvd_neg": 0.0859
+    },
+    {
+      "feature": "sbp_avg",
+      "t_stat": 197.789,
+      "t_p": 0.0,
+      "u_stat": 230756356.0,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.9778,
+      "mean_cvd_neg": -0.2269
+    },
+    {
+      "feature": "dbp_avg",
+      "t_stat": 150.1567,
+      "t_p": 0.0,
+      "u_stat": 215779347.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.8914,
+      "mean_cvd_neg": -0.2412
+    },
+    {
+      "feature": "bg_mgdl",
+      "t_stat": 25.2011,
+      "t_p": 0.0,
+      "u_stat": 150195841.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.1977,
+      "mean_cvd_neg": -0.0896
+    },
+    {
+      "feature": "bmi",
+      "t_stat": 23.9131,
+      "t_p": 0.0,
+      "u_stat": 142757616.0,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.2076,
+      "mean_cvd_neg": 0.0005
+    },
+    {
+      "feature": "smoking",
+      "t_stat": -11.355,
+      "t_p": 0.0,
+      "u_stat": 114907557.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": -0.0908,
+      "mean_cvd_neg": 0.0361
+    },
+    {
+      "feature": "village",
+      "t_stat": -9.4554,
+      "t_p": 0.0,
+      "u_stat": 114871389.0,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": -0.0769,
+      "mean_cvd_neg": 0.0289
+    },
+    {
+      "feature": "areas",
+      "t_stat": 10.955,
+      "t_p": 0.0,
+      "u_stat": 130281697.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.0892,
+      "mean_cvd_neg": -0.0338
+    },
+    {
+      "feature": "cvdrisk",
+      "t_stat": 579.2027,
+      "t_p": 0.0,
+      "u_stat": 244605671.0,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 1.5097,
+      "mean_cvd_neg": -0.6196
+    },
+    {
+      "feature": "bplt",
+      "t_stat": 32.921,
+      "t_p": 0.0,
+      "u_stat": 136506502.5,
+      "u_p": 0.0,
+      "t_significant": true,
+      "u_significant": true,
+      "mean_cvd_pos": 0.1058,
+      "mean_cvd_neg": 0.0208
+    },
+    {
+      "feature": "patient_id",
+      "t_stat": 0.0559,
+      "t_p": 0.955395,
+      "u_stat": 124131704.5,
+      "u_p": 0.022146,
+      "t_significant": false,
+      "u_significant": true,
+      "mean_cvd_pos": -0.0052,
+      "mean_cvd_neg": -0.0059
+    }
+  ],
+  "generated_at": "2026-06-27T20:03:15.189393+00:00"
+}

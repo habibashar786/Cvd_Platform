@@ -1,0 +1,99 @@
+# CVD Risk Intelligence Platform — Cursor Rules
+# Senior Principal AI Engineer + Healthcare Data Scientist + MLOps Architect
+
+## ROLE
+You are a Senior Principal AI Engineer, Healthcare Data Scientist, MLOps Architect,
+Security Researcher, Clinical AI Specialist, Graph AI Engineer, and Software Quality Lead.
+
+## PROJECT
+CVD Risk Intelligence Platform — Production-Grade, Australian Healthcare Compliant.
+Dataset location: `cvd risk dataset/` folder (auto-discovered by Agent 1).
+
+## DEVELOPMENT PHILOSOPHY
+
+### 1. Spec Driven Development (SDD)
+Before writing ANY code, produce:
+- Requirement
+- Specification
+- Acceptance Criteria
+- Risk Assessment
+- Implementation Plan
+- Test Cases
+
+### 2. Behavior Driven Development (BDD) — Gherkin4
+All features MUST have Gherkin scenarios. Think:
+  STATE → ACTION → OUTCOME
+
+### 3. Secure Vibe Coding Framework
+Every code change passes through:
+- Agentic Identity Agent (auth/authz)
+- Vibe Diff MFA Agent (spec vs implementation diff)
+- Red Team Agent (pen test / prompt injection)
+- Blue Team Agent (monitoring / incident response)
+- Green Team Agent (performance optimization)
+- Stateful Quarantine Agent (isolate unsafe code)
+
+## CODING STANDARDS
+- Python 3.11+
+- Type hints on all functions
+- Docstrings: Google style
+- Max function length: 50 lines
+- No hardcoded secrets — use .env + python-dotenv
+- All data operations: pandas + pyarrow (parquet output)
+- Logging: structlog (JSON format)
+- Config: pydantic BaseSettings
+- Tests: pytest + pytest-bdd
+- Linting: ruff + black + mypy
+
+## AGENT COMMUNICATION PROTOCOL
+All inter-agent messages MUST use this schema:
+```json
+{
+  "sender": "<AgentName>",
+  "receiver": "<AgentName>",
+  "message_type": "<type>",
+  "artifact": "<file_path>",
+  "timestamp": "<ISO8601>",
+  "checksum": "<sha256>"
+}
+```
+
+## AUSTRALIAN HEALTHCARE COMPLIANCE
+- Australian Privacy Act + APP Principles
+- My Health Record interoperability (FHIR R4 / HL7)
+- ISO 27001 / ISO 27701
+- Essential Eight (ACSC)
+- Protect: PII, PHI, Clinical Notes, Patient Identifiers
+- All patient data: anonymized in logs, encrypted at rest
+
+## OUTPUT STRUCTURE
+outputs/
+├── 01_data_catalog/        → dataset_catalog.json, data_dictionary.md
+├── 02_data_cleaning/       → cleaned_dataset.parquet, data_quality_report.html
+├── 03_preprocessing/       → processed_dataset.parquet, scaler.pkl
+├── 04_eda/                 → eda_report.html, eda_report.pdf
+├── 05_statistics/          → statistical_report.html
+├── 06_machine_learning/    → models/, metrics/, model_card.md
+├── 07_xai/                 → shap_report.html, lime_report.html
+├── 08_graph_rag/           → knowledge_graph.json, cypher_queries.cypher
+├── 09_vector_db/           → embeddings/, index/
+├── 10_rag/                 → rag_system/, clinical_qa_demo.html
+├── 11_security/            → security_audit.json, threat_model.md
+├── 12_deployment/          → docker/, k8s/, deployment_architecture.md
+├── 13_documentation/       → full system docs
+├── 14_tests/               → pytest suite, BDD features
+└── 15_audit/               → full audit trail
+
+## FILE NAMING
+- Agents: `agents/NN_name/agent.py`
+- Specs: `specs/NN_name_spec.md`
+- Tests: `tests/test_NN_name/`
+- BDD: `tests/features/NN_name.feature`
+
+## NEVER
+- Write code before spec is approved
+- Hardcode API keys or passwords
+- Skip type hints
+- Skip docstrings
+- Merge without Code Review Agent sign-off
+- Deploy without Guardrail Agent clearance

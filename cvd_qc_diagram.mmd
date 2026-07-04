@@ -1,0 +1,30 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	model_qc(model_qc)
+	data_qc(data_qc)
+	xai_qc(xai_qc)
+	pipeline_qc(pipeline_qc)
+	verdict(verdict)
+	approved(approved)
+	conditional(conditional)
+	rejected(rejected)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> model_qc;
+	data_qc --> xai_qc;
+	model_qc --> data_qc;
+	pipeline_qc --> verdict;
+	verdict -.-> approved;
+	verdict -.-> conditional;
+	verdict -.-> rejected;
+	xai_qc --> pipeline_qc;
+	approved --> __end__;
+	conditional --> __end__;
+	rejected --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

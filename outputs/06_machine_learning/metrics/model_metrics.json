@@ -1,0 +1,252 @@
+{
+  "best_model": {
+    "model": "LightGBM",
+    "accuracy": 0.9568,
+    "balanced_accuracy": 0.9315,
+    "precision": 0.9791,
+    "recall": 0.8706,
+    "sensitivity": 0.8706,
+    "specificity": 0.9923,
+    "f1_score": 0.9217,
+    "roc_auc": 0.9654,
+    "mcc": 0.8949,
+    "confusion_matrix": {
+      "TP": 1124,
+      "TN": 3104,
+      "FP": 24,
+      "FN": 167,
+      "clinical_note": "Model correctly identified 1124 CVD-positive patients and missed 167 (false negatives are critical in clinical settings)."
+    }
+  },
+  "all_models": [
+    {
+      "model": "LogisticRegression",
+      "accuracy": 0.8932,
+      "balanced_accuracy": 0.8875,
+      "precision": 0.785,
+      "recall": 0.8737,
+      "sensitivity": 0.8737,
+      "specificity": 0.9012,
+      "f1_score": 0.827,
+      "roc_auc": 0.9421,
+      "mcc": 0.7523,
+      "confusion_matrix": {
+        "TP": 1128,
+        "TN": 2819,
+        "FP": 309,
+        "FN": 163,
+        "clinical_note": "Model correctly identified 1128 CVD-positive patients and missed 163 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "DecisionTree",
+      "accuracy": 0.9568,
+      "balanced_accuracy": 0.9328,
+      "precision": 0.9741,
+      "recall": 0.8753,
+      "sensitivity": 0.8753,
+      "specificity": 0.9904,
+      "f1_score": 0.9221,
+      "roc_auc": 0.9613,
+      "mcc": 0.8947,
+      "confusion_matrix": {
+        "TP": 1130,
+        "TN": 3098,
+        "FP": 30,
+        "FN": 161,
+        "clinical_note": "Model correctly identified 1130 CVD-positive patients and missed 161 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "RandomForest",
+      "accuracy": 0.9568,
+      "balanced_accuracy": 0.9338,
+      "precision": 0.9709,
+      "recall": 0.8784,
+      "sensitivity": 0.8784,
+      "specificity": 0.9891,
+      "f1_score": 0.9223,
+      "roc_auc": 0.9604,
+      "mcc": 0.8946,
+      "confusion_matrix": {
+        "TP": 1134,
+        "TN": 3094,
+        "FP": 34,
+        "FN": 157,
+        "clinical_note": "Model correctly identified 1134 CVD-positive patients and missed 157 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "NaiveBayes",
+      "accuracy": 0.8961,
+      "balanced_accuracy": 0.8716,
+      "precision": 0.8286,
+      "recall": 0.8125,
+      "sensitivity": 0.8125,
+      "specificity": 0.9306,
+      "f1_score": 0.8205,
+      "roc_auc": 0.9248,
+      "mcc": 0.7475,
+      "confusion_matrix": {
+        "TP": 1049,
+        "TN": 2911,
+        "FP": 217,
+        "FN": 242,
+        "clinical_note": "Model correctly identified 1049 CVD-positive patients and missed 242 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "KNN",
+      "accuracy": 0.8803,
+      "balanced_accuracy": 0.8684,
+      "precision": 0.771,
+      "recall": 0.8397,
+      "sensitivity": 0.8397,
+      "specificity": 0.8971,
+      "f1_score": 0.8039,
+      "roc_auc": 0.9249,
+      "mcc": 0.7193,
+      "confusion_matrix": {
+        "TP": 1084,
+        "TN": 2806,
+        "FP": 322,
+        "FN": 207,
+        "clinical_note": "Model correctly identified 1084 CVD-positive patients and missed 207 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "SVM",
+      "accuracy": 0.9258,
+      "balanced_accuracy": 0.911,
+      "precision": 0.8712,
+      "recall": 0.8753,
+      "sensitivity": 0.8753,
+      "specificity": 0.9466,
+      "f1_score": 0.8733,
+      "roc_auc": 0.9523,
+      "mcc": 0.8208,
+      "confusion_matrix": {
+        "TP": 1130,
+        "TN": 2961,
+        "FP": 167,
+        "FN": 161,
+        "clinical_note": "Model correctly identified 1130 CVD-positive patients and missed 161 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "GradientBoosting",
+      "accuracy": 0.9532,
+      "balanced_accuracy": 0.9292,
+      "precision": 0.9648,
+      "recall": 0.8714,
+      "sensitivity": 0.8714,
+      "specificity": 0.9869,
+      "f1_score": 0.9158,
+      "roc_auc": 0.9652,
+      "mcc": 0.8856,
+      "confusion_matrix": {
+        "TP": 1125,
+        "TN": 3087,
+        "FP": 41,
+        "FN": 166,
+        "clinical_note": "Model correctly identified 1125 CVD-positive patients and missed 166 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "AdaBoost",
+      "accuracy": 0.9418,
+      "balanced_accuracy": 0.9232,
+      "precision": 0.919,
+      "recall": 0.8784,
+      "sensitivity": 0.8784,
+      "specificity": 0.968,
+      "f1_score": 0.8982,
+      "roc_auc": 0.9623,
+      "mcc": 0.858,
+      "confusion_matrix": {
+        "TP": 1134,
+        "TN": 3028,
+        "FP": 100,
+        "FN": 157,
+        "clinical_note": "Model correctly identified 1134 CVD-positive patients and missed 157 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "ExtraTrees",
+      "accuracy": 0.9455,
+      "balanced_accuracy": 0.923,
+      "precision": 0.9397,
+      "recall": 0.8691,
+      "sensitivity": 0.8691,
+      "specificity": 0.977,
+      "f1_score": 0.903,
+      "roc_auc": 0.9588,
+      "mcc": 0.8664,
+      "confusion_matrix": {
+        "TP": 1122,
+        "TN": 3056,
+        "FP": 72,
+        "FN": 169,
+        "clinical_note": "Model correctly identified 1122 CVD-positive patients and missed 169 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.9568,
+      "balanced_accuracy": 0.9324,
+      "precision": 0.9758,
+      "recall": 0.8737,
+      "sensitivity": 0.8737,
+      "specificity": 0.991,
+      "f1_score": 0.9219,
+      "roc_auc": 0.9608,
+      "mcc": 0.8948,
+      "confusion_matrix": {
+        "TP": 1128,
+        "TN": 3100,
+        "FP": 28,
+        "FN": 163,
+        "clinical_note": "Model correctly identified 1128 CVD-positive patients and missed 163 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "LightGBM",
+      "accuracy": 0.9568,
+      "balanced_accuracy": 0.9315,
+      "precision": 0.9791,
+      "recall": 0.8706,
+      "sensitivity": 0.8706,
+      "specificity": 0.9923,
+      "f1_score": 0.9217,
+      "roc_auc": 0.9654,
+      "mcc": 0.8949,
+      "confusion_matrix": {
+        "TP": 1124,
+        "TN": 3104,
+        "FP": 24,
+        "FN": 167,
+        "clinical_note": "Model correctly identified 1124 CVD-positive patients and missed 167 (false negatives are critical in clinical settings)."
+      }
+    },
+    {
+      "model": "CatBoost",
+      "accuracy": 0.9577,
+      "balanced_accuracy": 0.9328,
+      "precision": 0.98,
+      "recall": 0.873,
+      "sensitivity": 0.873,
+      "specificity": 0.9926,
+      "f1_score": 0.9234,
+      "roc_auc": 0.9624,
+      "mcc": 0.8971,
+      "confusion_matrix": {
+        "TP": 1127,
+        "TN": 3105,
+        "FP": 23,
+        "FN": 164,
+        "clinical_note": "Model correctly identified 1127 CVD-positive patients and missed 164 (false negatives are critical in clinical settings)."
+      }
+    }
+  ],
+  "generated_at": "2026-07-04T10:16:20.112470+00:00"
+}
